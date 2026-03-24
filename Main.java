@@ -48,4 +48,17 @@ public class Main {
                 phoneCounts.put(key, phoneCounts.getOrDefault(key, 0) + 1);
             }
         }
+        System.out.println("  Laptops:");
+        for (Map.Entry<String, Integer> entry : laptopCounts.entrySet()) {
+            System.out.printf("    %-20s : %d unit(s)%n", entry.getKey(), entry.getValue());
+        }
+
+        System.out.println("  Phones:");
+        for (Map.Entry<String, Integer> entry : phoneCounts.entrySet()) {
+            System.out.printf("    %-20s : %d unit(s)%n", entry.getKey(), entry.getValue());
+        }
+
+        System.out.println("============================================");
+    }
+}
     }
