@@ -29,4 +29,23 @@ public class Main {
         }
         System.out.println("============================================");
     }
-}
+ // ── Prints the Laptop and Phone Inventory ─────────────────────────────────
+    private static void printInventory(List<Hardware> list) {
+        System.out.println("============================================");
+        System.out.println("       LAPTOP AND PHONE INVENTORY           ");
+        System.out.println("============================================");
+
+        Map<String, Integer> laptopCounts = new LinkedHashMap<>();
+        Map<String, Integer> phoneCounts  = new LinkedHashMap<>();
+
+        // Single polymorphic loop using instanceof
+        for (Hardware h : list) {
+            if (h instanceof Laptop) {
+                String key = h.getInterpretation();
+                laptopCounts.put(key, laptopCounts.getOrDefault(key, 0) + 1);
+            } else if (h instanceof Phone) {
+                String key = h.getInterpretation();
+                phoneCounts.put(key, phoneCounts.getOrDefault(key, 0) + 1);
+            }
+        }
+    }
