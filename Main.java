@@ -18,4 +18,15 @@ public class Main {
         System.out.println("============================================");
         System.out.printf("%-4s %-20s %-10s %-20s%n", "ID", "Brand", "Type", "Specification");
         System.out.println("--------------------------------------------");
+ 
+     for (Hardware h : list) {
+            String type = (h instanceof Laptop) ? "Laptop" : "Phone";
+            System.out.printf("%-4d %-20s %-10s %-20s%n",
+                    h.getId(),
+                    h.getBrand(),
+                    type,
+                    h.getInterpretation());
+        }
+        System.out.println("============================================");
+    }
 }
