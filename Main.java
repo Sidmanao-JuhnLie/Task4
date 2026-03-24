@@ -12,4 +12,10 @@ public class Main {
         System.out.println();
         printInventory(hardwareList);
     }
+ private static void printMasterlist(List<Hardware> list) {
+        System.out.println("============================================");
+        System.out.println("           HARDWARE MASTERLIST              ");
+        System.out.println("============================================");
+        System.out.printf("%-4s %-20s %-10s %-20s%n", "ID", "Brand", "Type", "Specification");
+        System.out.println("--------------------------------------------");
 }
